@@ -1,0 +1,477 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100;1,400&display=swap');
+
+:root{
+    --dark-blue:rgb(1, 1, 53);
+    --white-blue: rgb(2, 2, 176);
+    --white:rgb(255, 252, 252);
+    --gray:rgb(167, 164, 164);
+
+    
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+.sidebar{
+    position: fixed;
+    left:0px;
+
+    top:0;
+    width:250px;
+    height: 100%;
+    padding-left: 20px;
+    background: var(--dark-blue);
+    transition: all 0.5s ease;
+    z-index: -99;
+}
+
+
+.sidebar .logo_details{
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li{
+    position: relative;
+    margin: 8px 0;
+    list-style: none;
+}
+
+.sidebar i{
+    position: relative;
+    height: 60px;
+    min-width: 50px;
+    font-size: 28px;
+    line-height: 60px;
+    text-align: center;
+    color: var(--white);
+
+}
+
+.sidebar .logo_details .logo_name{
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+
+}
+
+.sidebar ul li a i{
+    position: relative; 
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+
+    
+}
+
+
+.sidebar ul li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 30px 0px 0px 30px;
+    transition: all 0.5s ease;
+
+}
+
+.sidebar ul li a .links_name{
+    color: var(--white);
+    transition: all 0.3s ease-in;
+
+}
+
+.sidebar li.login {
+    /* position: fixed; */
+    width: 250px;
+    height: 60px;
+    left: 0;
+    bottom: -8px;
+    padding: 20px 20px;
+    background-color: var(--white-blue);
+
+}
+
+
+.sidebar .login #login_out{
+    position: absolute;
+    height: 600px;
+    right: 0;
+    transform: translateY(-50%);
+    line-height: 60px;
+    transition: all 0.5 ease;
+
+}
+
+.sidebar li a.active{
+
+    background:var(--white);
+
+}
+
+.sidebar li a:hover{
+
+    background:var(--white);
+
+}
+
+.sidebar li a:hover .links_name,
+.sidebar li a:hover .active .links_name,
+.sidebar li a:hover i{
+    color: var(--dark-blue);
+}
+
+.sidebar li.login a:hover{
+    background: none;
+}
+
+.sidebar li.login a:hover .links_name,
+.sidebar li.login a:hover i{
+    color: var(--white);
+}
+
+.home_section{
+    position: relative;
+    width: calc(100% -250px);
+    min-height: 100vh;
+    left: 250px;
+    top: 0;
+    background: #dfdfdf;
+    transition: all 0.5s ease;
+  
+}
+
+.home_section:hover{
+    position: relative;
+    left:-10px;
+}
+
+.home_section .topbar{
+    position: relative;
+    width:100%;
+    height:70px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: var(--white);
+}
+
+.home_section .topbar .toggle{
+    position: relative;
+    width:60px;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.home_section .topbar .toggle .search_wrapper{
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border: 1px solid whitesmoke;
+    border-radius: 30px;
+    overflow-x: hidden ;
+}
+
+.home_section .topbar .toggle .search_wrapper input{
+    position: relative;
+    height: 100%;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+
+
+    
+}
+
+.home_section .user_wrapper img{
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+}
+
+/* ENd of top bar */
+
+.card-boxes{
+    position: relative;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:30px;
+}
+
+.card-boxes .box{
+    position: relative;
+    background: white;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: 2px 7px 25px  rgb(3, 81, 236);
+    cursor: pointer;
+
+}
+
+.card-boxes .box .numbers{
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.card-boxes .box .box_topic{
+    position: relative;
+    margin-top: 5px;
+    font-size: 1.2em;
+    color: blue;
+    font-weight: 300;
+}
+
+.card-boxes .box i{
+    position: relative;
+    font-size: 3em;
+    color: var(--dark-blue);
+}
+
+/* Start of latest project */
+
+.details{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+} 
+
+.details .recent_projects ,
+.details .recent_customers{
+
+    position: relative;
+    display: gird;
+    min-width: 320px;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 2px 7px 25px #07a3f8;
+    overflow-y: auto;
+    white-space: nowrap;
+
+
+}
+
+.details table{
+    width: 100%;
+    margin: 10px;
+    border-collapse: collapse;
+    
+}
+
+.details .card_header h2{
+    position: relative;
+    font-weight: bold;
+    line-height: 1.2;
+    color: black;
+}
+
+.details .recent_projects tr{
+    border-bottom: 1px solid rgb(243, 243, 245);
+
+}
+
+.details .recent_projects table tr:last-child{
+    border-bottom: none;
+}
+
+.details .recent_projects table tr td{
+    padding: 1rem 1rem;
+}
+
+.details .recent_projects table tbody tr td{
+    position: relative;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--dark-blue);
+}
+
+.img_group{
+    position: relative;
+    display: inline-block;
+    margin: -0.7rem;
+}
+
+.img_group img,.img_group .initial{
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+}
+
+.img_group:hover{
+    z-index: 2;
+}
+
+.initial{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(179, 137, 179);
+    color: white;
+    
+}
+
+.details .recent_customers{
+    position: relative;
+
+}
+
+.details .recent_customers table tr{
+    height: 80px;
+
+}
+
+.details .recent_customers table tr td h4{
+
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2em;
+    color: var(--dark-blue);
+
+}
+
+
+.details .recent_customers table tr td span{
+
+    position: relative;
+    font-size: 13px;
+ 
+    color: var(--dark-blue);
+    
+}
+
+.details .recent_customers .info_img img{
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+/* responsivenes */
+
+@media screen and (max-width:990px){
+
+    .sidebar,
+    .sidebar li.login{
+        left: -250px;
+    }
+
+    .home_section{
+        width: 100%;
+        left: 0;
+    }
+
+    .card-boxes{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+
+    }   
+    
+    .details{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .details .recent_customers table{
+
+        width: 50%;
+        margin-top: 30px;
+
+
+    }
+}
+
+.sidebar .open ~ .home_section .topbar .toggle{
+    z-index: 1000 ;
+    position: absolute;
+    width: 110%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sidebar .open ~ .home_section{
+    left: 0;
+}
+
+@media screen and (max-width:1200px) {
+
+    .card-boxes{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    
+}
+
+@media screen and (max-width:600px) {
+
+    .card-boxes{
+        width: 100%;
+        grid-template-columns: repeat(1,1fr);
+
+    }
+
+    .details{
+        grid-template-columns: repeat(1,1fr);
+
+    }
+
+    .details .recent_projects,.details .recent_customers{
+        width: 100%;
+        font-size: small;
+        padding: 10px;
+    }
+
+    .details .recent_customers{
+        width: 100%;
+        margin-top: 30px;
+
+    }
+
+    .details .card_header h2{
+        font-size: 13px;
+    }
+
+    .details table tbody tr td{
+        font-size: 10px;
+    }
+    
+    .details .recent_project table tbody tr trd{
+        font-size: 12px;
+    }
+
+    .home_section .search_wrapper .topbar .search_wrapper{
+        display: none;
+
+    }
+
+  
+}

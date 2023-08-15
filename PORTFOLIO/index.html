@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shalini Kumari - Portfolio</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"></head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h2 class="name">Shalini</h2>
+                <ul id="sideMenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#workandproject">Work/Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact me</a></li>
+                    <i class="uil uil-multiply" onclick="closeMenu()"></i> 
+
+                </ul>
+                <i class="uil uil-apps" onclick="openMenu()"></i> 
+
+            </nav>
+            <div class="header-text">
+                <h1>Hi..! <br> I am <span>Shalini </span> Kumari</h1>
+                <p>Full Stack Developer</p>
+            </div>
+
+            <!-- Social media Links -->
+
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/shalini-kumari-298608193/"><i class="uil uil-linkedin"></i></a>
+                <a href="https://github.com/shalinik898"><i class="uil uil-github"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <images src="data:image/jpeg;base64,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" alt="">
+                    <a href="https://www.msnlabs.com/images/resume-sample.pdf" class="btn btn-1">Resume</a>
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>A lifetime Learner, Team Player, Hard Working with hands on knowledge  in demanding
+                        full Stack Technologies such as React.js ,Node.js,Angular,Java,Python,Automation Testing,
+                        Devops and Cloud, Robot Framework and Backend Technologies Mongodb,Oracle,Node.js,DSA who 
+                        wants to upgrade skills and contribute to organization where my skills are recognized.</p>
+                
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="openTab('certification')">Certification</p>
+                    <p class="tab-links" onclick="openTab('education')">Education</p>
+                    <p class="tab-links" onclick="openTab('achievements')">Achievements</p>
+                    <p class="tab-links" onclick="openTab('interests')">Interest</p>                
+                </div>
+
+                <div class="tab-contents active-tab" id="certification">
+
+                    <ul>
+                        <li>
+                            <span>Lets Upgrade Full Stack Developer Program</span>
+                            <span><a href="https://priyadogra.com/wp-content/uploads/2022/07/Full-Stack-Development-Free-Certificate-pdf.jpg">Certificate Links</a></span>
+
+                        </li>
+
+                        <li>
+                            <span>Java Full Stack Developer Program</span>
+                            <span><a href="https://priyadogra.com/wp-content/uploads/2022/07/Full-Stack-Development-Free-Certificate-pdf.jpg">Certificate Links</a></span>
+                            
+                        </li>
+                    </ul>
+                    
+                </div>
+                <div class="tab-contents" id="education">
+
+                <ul>
+                    <li>
+                        <span>Modern Education Society's College of Engineering </span> ,India <br>
+                        June 2021 <br>
+                        B.E (Computer Science)
+                    </li>
+                
+
+                    <li>
+                        <span>Kendriya Vidyalaya No-1 ,AFS Lohegaon </span>Pune,India <br>
+                        May 2017 <br> 
+                        HSC                   
+                    </li>
+
+                    <li>
+                        <span>Kendriya Vidyalaya No-1 ,AFS Lohegaon </span>Pune,India <br>
+                        May 2015 <br> 
+                        SSC                   
+                    </li>
+
+                </ul>
+                
+                </div>
+
+                <div class="tab-contents" id="achievements">
+                    <ul>
+                        <li>
+                            <span>Add achievements</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="interests">
+
+                    <ul>
+                        <li>Travelling</li>
+                        <li>Dancing</li>
+
+                    </ul>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div id="skills">
+                    <div class="container">
+                        <h1 class="sub-title">Skills</h1>
+                        <div class="skills-list">
+                            <div class="skill">
+                                <div style="background-color: orange ; width: 70%;">HTML5</div>
+                                <div style="background-color: white ; width: 30%;">70%</div>                           
+                            </div>
+
+                            <div class="skill">
+                                <div style="background-color: rgb(51, 255, 0) ; width: 70%;">CSS</div>
+                                <div style="background-color: white ; width: 30%;">70%</div>                           
+                            </div>
+
+                            <div class="skill">
+                                <div style="background-color: rgb(0, 47, 255) ; width: 70%;">Javascript</div>
+                                <div style="background-color: white ; width: 30%;">70%</div>                           
+                            </div>
+
+                            <div class="skill">
+                                <div style="background-color: rgb(251, 0, 255) ; width: 70%;">Node.js</div>
+                                <div style="background-color: white ; width: 30%;">70%</div>                           
+                            </div>
+
+                            <div class="skill">
+                                <div style="background-color: rgb(255, 0, 93) ; width: 70%;">Express js</div>
+                                <div style="background-color: white ; width: 30%;">70%</div>                           
+                            </div>
+
+                            <div class="skill">
+                                <div style="background-color: rgb(255, 225, 0) ; width: 70%;">Mongodb</div>
+                                <div style="background-color: white ; width: 30%;">70%</div>                           
+                            </div>
+
+                            <div class="skill">
+                                <div style="background-color: rgb(0, 247, 255) ; width: 70%;">Bootstrap</div>
+                                <div style="background-color: white ; width: 30%;">70%</div>                           
+                            </div>
+
+                            <div class="skill">
+                                <div style="background-color: rgb(255, 0, 0) ; width: 70%;">Express js</div>
+                                <div style="background-color: white ; width: 30%;">70%</div>                           
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 20px">
+                    <h1>Tools</h1>
+                    <div class="tools">
+                        <div class="tool" style="background-color: rgb(122, 60, 60);">Git</div>
+                        <div class="tool" style="background-color: rgb(246, 109, 18);">VSCode</div>
+                        <div class="tool" style="background-color: rgb(165, 142, 42);">Postman</div>
+                    </div>
+                    </div>
+                </div>
+
+      
+
+<!-- Work/Projects -->
+<div id="workandproject">
+    <div class="container">
+        <h1 class="sub-title">My Work and Projects</h1>
+
+        <div class="wp-list">
+            <div class="wp">
+            <images src="data:image/png;base64,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" alt="">
+            <div class="layer">
+                <h4>StackOverflow Clone</h4>
+                <em>Dec,2022-April,2023</em>
+                <p>This is a StackOverflow prototype mini clone</p>
+                <div class="used">
+                    <span>Reactjs</span> <span>Nodejs</span> <span>Expressjs</span>
+                    <span>Mongo db</span>  <span>MUI</span>  <span>Reactstrap</span>
+                </div>
+                <div style="display: flex; justify-content: space-around; width:100;">
+                    <a style="color: red;" href="" target="_blank" ><i class="uil uil-link">Live</i></a>
+                    <a style="color: blue;" href="" target="_blank" ><i class="uil uil-link">Github</i></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="wp">
+            <images src="data:image/png;base64,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" alt="">
+            <div class="layer">
+                <h4>Amazon Clone</h4>
+                <em>Dec,2022-April,2023</em>
+                <p>This is a Amazone prototype mini clone</p>
+                <div class="used">
+                    <span>Reactjs</span> <span>Nodejs</span> <span>Expressjs</span>
+                    <span>Mongo db</span>  <span>MUI</span>  <span>Reactstrap</span>
+                </div>
+                <div style="display: flex; justify-content: space-around; width:100;">
+                    <a style="color: red;" href="" target="_blank" ><i class="uil uil-link">Live</i></a>
+                    <a style="color: blue;" href="" target="_blank" ><i class="uil uil-link">Github</i></a>
+
+                </div>
+            </div>
+        </div> 
+    </div>
+</div>
+</div>
+
+<!-- Experience -->
+
+<div id="experience">
+    <div class="container">
+        <h1 class="sub-title">Experience</h1>
+        <div class="tab-titles">
+            <p class="exp-tab-links exp-active-link" onclick="openTabExp('RedHat')">Red Hat Private Ltd.</p>
+        </div>
+
+        <div class="exp-tab-contents exp-active-tab" id="RedHat"></div>
+        <ul>
+            <li>
+                <span>Red Hat</span>,Pune,India <br>
+                2021,June-current <br>
+                <em style="opacity: .5;">ATSE</em>
+            </li>
+            <li>
+                <ul>
+                    <li><strong>"Worked on many companies project"</strong></li>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Contact me -->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-contact-1">
+                <h1 class="sub-title">Contact me</h1>
+                <p><i class="uil uil-envelope"></i>shalinik898@gmail.com</p>
+                <p><i class="uil uil-mobile-android"></i></i>91-8237243991</p>
+
+             <div class="social-icons">
+                <a href="https://www.linkedin.com/in/shalini-kumari-298608193/"><i class="uil uil-linkedin"></i></a>
+                <a href="https://github.com/shalinik898"><i class="uil uil-github"></i></a>
+            </div>
+            <a href="https://www.msnlabs.com/images/resume-sample.pdf" class="btn btn-1">Resume</a>
+        </div>
+        <div class="col-contact-2">
+            <span id="msg"></span>
+        </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="copyright">
+    <p>Copyright &#169 2023-Shalini Kumari</p>
+    
+</div>
+
+<a href="#header"><i class="uil uil-arrow-circle-up"></i></a>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

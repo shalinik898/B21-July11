@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Admin Chart Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav_icon" onclick="toggleSidebar()">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="navbar_left">
+                <a href="#">Subscriber</a>
+                <a href="#">Video Managment</a>
+                <a href="#" class="active_link">Admin</a>
+            </div>
+            <div class="navbar_right">
+                <a href="#">
+                    <i class="fa fa-search"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-clock-o"></i>
+                </a>
+                <a href="#">
+                    <img src="data:image/png;base64,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" alt="avatar1" width="30"> 
+                </a>
+            </div>
+        </nav>
+
+        <!-- main container  -->
+        <main>
+            <div class="main_container">
+                <div class="main_title">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOEH93f3Zps1pMuY2_WuYrAhhA4GN2RGKoYHMBxUqjS3qavimRhsTE96hUX40H-Lcobak&usqp=CAU" width="100">
+                    <div class="main_greeting">
+                        <h1>Hello Coders</h1>
+                        <p>Welcome to your Admin Dashboard</p>
+                    </div>
+                </div>
+
+
+                <div class="main_cards">
+                    <div class="card">
+                        <i class="fa fa-user-o fa-2x text-primary"></i>
+                        <div class="card_inner">
+                            <p class="text-primary-p">Number of Subscribers</p>
+                            <span class="font-bold text-title">578</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <i class="fa fa-calendar fa-2x text-red"></i>
+                        <div class="card_inner">
+                            <p class="text-primary-p">Times of Watching</p>
+                            <span class="font-bold text-title">2433</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <i class="fa fa-video-camera fa-2x text-yellow"></i>
+                        <div class="card_inner">
+                            <p class="text-primary-p">Number of Videos</p>
+                            <span class="font-bold text-title">342</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <i class="fa fa-thumbs-up fa-2x text-green"></i>
+                        <div class="card_inner">
+                            <p class="text-primary-p">Number of Likes</p>
+                            <span class="font-bold text-title">1214</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts">
+                    
+                    <div class="charts_left">
+                        <div class="charts_left_title">
+                            <div>
+                            <h1>Daily Reports</h1>
+                            <p>Benagluru</p> 
+                            </div>
+                          <i class="fa fa-usd"></i>
+                       </div>
+                        <div id="apex1"></div>
+                  </div>
+             
+                  <!-- closing of chart left  -->
+
+                <div class="charts_right">
+                    <div class="charts_right_title">
+                        <div>
+                            <h1>Stats Reports</h1>
+                            <p>Delhi</p>
+                        </div>
+                        <i class="fa fa-usd"></i>
+                    </div>
+                    <div class="charts_right_cards">
+                        
+                        <div class="card1">
+                            <h1>Income</h1>
+                            <p>$97,500</p>
+                        </div>
+                        <div class="card2">
+                            <h1>Sales</h1>
+                            <p>$2,41,750</p>
+                        </div>
+                        <div class="card3">
+                            <h1>Users</h1>
+                            <p>3000</p>
+                        </div>
+                        <div class="card4">
+                            <h1>Orders</h1>
+                            <p>800</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+  
+ 
+    <!-- Container Sidebar  -->
+    <div id="sidebar">
+        <div class="sidebar_title">
+            <div class="sidebar_img">
+                <h1 id="sidebarh1">Codersup</h1>
+            </div>
+            <i class="fa fa-times" id="sidebarIcon" onclick="closeSidebar()"></i>
+        </div>
+        <div class="sidebar_menu">
+            <div class="sidebar_link active_menu_link">
+                <i class="fa fa-home"></i>
+                <a href="#"></a>
+            </div>
+            <h2>MNG</h2>
+
+            <div class="sidebar_link">
+                <i class="fa fa-user-secret"></i>
+                <a href="#">Admin Managment</a>
+            </div>
+
+            <div class="sidebar_link">
+                <i class="fa fa-building"></i>
+                <a href="#">Company Managment</a>
+            </div>
+
+            
+
+            <div class="sidebar_link">
+                <i class="fa fa-wrench"></i>
+                <a href="#">Employee Management</a>
+            </div>
+
+            <div class="sidebar_link">
+                <i class="fa fa-archive"></i>
+                <a href="#">Warehouse</a>
+            </div>
+
+            <div class="sidebar_link">
+                <i class="fa fa-handshake-o"></i>
+                <a href="#">Contracts</a>
+            </div>
+
+            <div class="sidebar_link">
+                <i class="fa fa-question"></i>
+                <a href="#">Requests</a>
+            </div>
+            <div class="sidebar_link">
+                <i class="fa fa-sign-out"></i>
+                <a href="#">Leave policy</a>
+            </div>
+
+            <div class="sidebar_link">
+                <i class="fa fa-calendar"></i>
+                <a href="#">Special Days</a>
+            </div>
+
+            <div class="sidebar_link">
+                <i class="fa fa-files-o"></i>
+                <a href="#">Apply for leave</a>
+            </div>
+
+            <h2 >Payroll</h2>
+
+            
+            <div class="sidebar_link">
+                <i class="fa fa-money"></i>
+                <a href="#">Payroll</a>
+            </div>
+            <div class="sidebar_link">
+                <i class="fa fa-google-wallet"></i>
+                <a href="#">G-Pay</a>
+            </div>
+
+            <div class="sidebar_link">
+                <i class="fa fa-sign-out"></i>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </div>
+    <!-- close of sidebar  -->
+</div>
+<!-- close of entire container  -->
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="./script.js"></script>
+</body>
+
+</html>
